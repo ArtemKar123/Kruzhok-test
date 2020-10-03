@@ -8,7 +8,7 @@ ap.add_argument("-p", "--path", required=True,
                 help="Path to image")
 args = vars(ap.parse_args())
 
-template = cv2.imread('1.png')
+template = cv2.imread('template.png')
 template = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
 template = cv2.Canny(template, 50, 200)
 (tH, tW) = template.shape[:2]
